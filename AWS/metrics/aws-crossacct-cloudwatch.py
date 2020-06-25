@@ -45,7 +45,7 @@ for reservation in ec2_description["Reservations"]:
                                 }
                             ]
                         },
-                        "Period": 3600,
+                        "Period": 3600, # The retrieval interval is 1 hour. So aggregate of 1 hour will be output
                         "Stat": "Average",
                         "Unit": "Percent"
                     },
