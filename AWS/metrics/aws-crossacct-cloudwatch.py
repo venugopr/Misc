@@ -5,7 +5,8 @@ import json
 
 sts_client = boto3.client('sts')
 sts_response = sts_client.assume_role(
-    # The below role arn will be the role created in the other account
+    # The below role arn will be the role created in the other account.
+    # Please change this value based on your scenario.
     RoleArn='arn:aws:iam::987654321987:role/CloudWatch-CrossAccountSharingRole',
     RoleSessionName='cloudwatch-share-acct-session'
 )
@@ -46,7 +47,7 @@ for reservation in ec2_description["Reservations"]:
                             ]
                         },
                         "Period": 3600, # The retrieval interval is 1 hour. So aggregate of 1 hour will be output
-                        "Stat": "Average",
+                        "Stat": "Average", # Average CPU utilization in an hour
                         "Unit": "Percent"
                     },
                     "Label": "CPUUtilizationResponse",
