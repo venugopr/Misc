@@ -1,0 +1,27 @@
+server:
+   port: 8080
+spring:
+   security:
+      user:
+         name: admin
+         password: password
+   jpa:
+      hibernate:
+         ddl-auto: none
+   cloud:
+      gateway:
+      globalcors:
+         corsConfigurations:
+            '[/**]':
+               allowedOrigins: "http://localhost:9080"         
+logging:
+   level:
+      org:
+         springframework:
+            security: DEBUG
+eureka:
+   client:
+      service-url:
+         defaultZone: http://admin:password@localhost:8761/eureka/
+   server:
+      waitTimeInMsWhenSyncEmpty: 0

@@ -1,0 +1,20 @@
+server:
+   port: 8761
+spring:
+   security:
+      user:
+         name: admin
+         password: password
+logging:
+   level:
+      org:
+         springframework:
+            security: DEBUG
+eureka:
+   client:
+      registerWithEureka: false
+      fetchRegistry: false
+      service-url:
+         defaultZone: http://admin:password@localhost:8761/eureka/
+   server:
+      waitTimeInMsWhenSyncEmpty: 0

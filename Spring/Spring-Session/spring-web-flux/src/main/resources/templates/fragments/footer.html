@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"
+	th:href="@{/resources/css/bootstrap.min.css}" />
+</head>
+<div th:fragment="footer" th:align="center">
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script src="./js/bootstrap.min.js"></script>
+	<span>Spring Boot APP <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy')}">2017</span></span>
+</div>

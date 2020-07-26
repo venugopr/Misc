@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Dashboard Template</title>
+
+<!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="./css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+	<div th:fragment="left-sidebar">
+		<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+				<ul class="nav flex-column">
+					<li class="nav-item"><a class="nav-link active" href="#"> <span data-feather="home"></span> Dashboard <span
+							class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="/findAllCustomers"> <span data-feather="users"></span>
+							Customers
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="/findAllCustomersReactive"> <span
+							data-feather="shopping-cart"></span> Customers Reactive
+					</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</body>

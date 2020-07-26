@@ -1,0 +1,13 @@
+server:
+   port: 8082
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://admin:password@localhost:8761/eureka/
+spring:
+   h2:
+      console:
+         enabled: true         
+   jpa:
+      hibernate:
+         ddl-auto: none
