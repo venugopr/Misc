@@ -37,7 +37,6 @@ public class CustomerController {
 	public String findAllReactive(Model model, Authentication authentication) {
 		String token = jwtUtils.generateJwtToken(authentication);
 		List<Customer> customers = this.customerServcie.findAllCustomers(token);
-//		Flux<Customer> data = Flux.fromIterable(customers);
 		// Introducing a delay of 200 ms to show the streaming behaviour
 		IReactiveDataDriverContextVariable data = new ReactiveDataDriverContextVariable(Flux.fromIterable(customers).delayElements(Duration.ofMillis(200)));
 		model.addAttribute("customers", data);
